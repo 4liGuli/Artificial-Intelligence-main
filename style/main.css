@@ -1,0 +1,1019 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+
+
+
+body{
+  width: 100%;
+  height: 100px;
+  background-color: #08101E;
+}
+
+header{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.informationsize{
+  background-color: #0A121F;
+}
+
+.information{
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+.information .logo {
+  display: flex;
+  gap: 15px;
+  text-decoration: none;
+  align-items: center;
+}
+
+.information .logo img{
+  width: 45px;
+}
+
+.information .logo h2{
+  font-size: 22.55px;
+  font-weight: 600;
+  color: #3A68B8;
+  
+}
+
+.information .about{
+  width: 55%;
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  margin-top: 10px;
+}
+
+.information .about .fa-xmark{
+  display: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 1.5rem;
+
+}
+
+.information .about a{
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.information .about a:hover{
+  color: #3A68B8;
+}
+
+.information .signin-btn{
+  border: none;
+  outline: none;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #3A68B8;
+  transition: 1s ease;
+}
+
+.information .signin-btn:hover{
+  background: #0C3090;
+}
+
+.blur-bg-overlay{
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  backdrop-filter: blur(5px);
+  transition: 1s ease;
+}
+
+.show-popup .blur-bg-overlay{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.form-popup{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 720px;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  background: #FFFFFF;
+  border: 2px solid white;
+  transform: translate(-50%,-100%);
+}
+
+.show-popup .form-popup{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%,-50%);
+  transition: transform 1s ease, opacity 3s;
+}
+
+.form-popup .fa-xmark{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: #B4B7BB;
+  cursor: pointer;
+}
+
+.form-popup .from-box{
+  display: flex;
+}
+
+.from-box .from-details{
+  max-width: 330px;
+  width: 100%;
+  color: white;
+  display: flex;
+  padding: 0 20px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login .from-details{
+  background: url("/images/loginwelcome2.avif");
+  background-size: cover;
+  background-position: center;
+}
+
+.signup .from-details{
+  background: url("/images/loginwelcome3.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.from-box h2{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.from-box .from-content{
+  width: 100%;
+  padding: 35px;
+}
+
+from .input-field{
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+
+from .input-field input{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 15px;
+  font-size: 0.95rem;
+  border-radius: 3px;
+  border: 1px solid #B4B7BB;
+}
+
+.input-field input:focus{
+  border-color: aqua;
+}
+
+.input-field input:is(:focus, :valid){
+  padding: 16px 15px 0;
+}
+
+from .input-field label{
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  color: #B4B7BB;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: 1s ease;
+}
+
+.input-field input:is(:focus, :valid) ~ label{
+  color: aqua;
+  font-size: 10px;
+  transform: translateY(-120%);
+}
+
+.from-box a{
+  color: #3A68B8;
+  text-decoration: none;
+}
+
+.from-box a:hover {
+  text-decoration: underline;
+}
+
+from button {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 0;
+  border-radius: 3px;
+  margin: 25px 0;
+  color: white;
+  cursor: pointer;
+  background: #00bcd4;
+  transition: 1s ease;
+}
+
+from button:hover{
+  background: blue;
+}
+
+.from-box .bottom-link{
+  text-align: center;
+}
+
+.from-box :where(.forgot-pass, .policy-text){
+  display: inline-flex;
+  margin-top: 14px;
+  font-size: 0.95rem;
+}
+
+.form-popup .signup, 
+.form-popup.show-signup .login{
+  display: none;
+}
+.form-popup.show-signup .signup{
+  display: flex;
+}
+
+.signup .policy-text{
+  display: flex;
+  align-items: center;
+}
+
+.signup .policy-text input{
+  width: 14px;
+  height: 14px;
+  margin-right: 7px;
+}
+
+.entrys{
+  margin-left: 2%;
+  margin-right: 12%;
+}
+
+.texts{
+  text-decoration: none;
+}
+.texts h6{
+  width: 100%;
+  margin-top: 50px;
+  font-size: 15px;
+  color: #3A68B8;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.texts h1{
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 49px;
+  color: #FFFFFF;
+}
+.texts h5{
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 15px;
+  color: #B4B7BB;
+}
+
+.entry-img img{
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.entry p{
+  color: #666;
+}
+
+.entry .getstarted{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  color: #FFFFFF;
+  padding: 10px 18px;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #3A68B8; 
+  transition: 1s ease;
+}
+
+.entry .getstarted:hover{
+  background: #0C3090;
+}
+
+.entry .watchvideo{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  color: #FFFFFF;
+  padding: 10px 18px;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #3A68B8;
+  margin-left: 15px;
+  transition: 1s ease;
+}
+
+.entry .watchvideo img{
+  margin: 1px;  
+}
+
+.entry .watchvideo:hover{
+  background: #0C3090;
+}
+
+.videoo{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 20%;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+}
+.videoo.entervideo{
+  height: 40%;
+  width: 80%;
+  bottom: 45%;
+  left: 15%;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transition: transform 1s ease, opacity 3s;
+}
+.videoo video{
+  position: relative;
+  max-width: 500px;
+  outline: none;
+  
+}
+.videoo .close{
+  position: absolute;
+  bottom: 70%;
+  left: 82%;
+  max-width: 35px;
+  cursor: pointer;
+  filter: invert(1);
+}
+
+.company-logo div {
+  display: block;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  
+}
+
+.entrytwo{
+  margin-bottom: 100px;
+}
+
+.textstwo{
+  text-decoration: none;
+}
+
+.textstwo h1{  
+  margin-top: 180px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 35px;
+  color: #FFFFFF;
+  margin-bottom: 35px;
+}
+.textstwo h5{  
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 15px;
+  color: #B4B7BB;
+}
+
+.entrytwo-img img{
+  width: 500px;
+}
+.entrytwo p{
+  color: #666;
+}
+
+.entrytwo .learnmore{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  color: #FFFFFF;
+  padding: 10px 22px;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #3A68B8;
+  transition: 1s ease;
+  
+}
+
+.entrytwo .learnmore:hover{
+  background: #0C3090;
+}
+
+.logo-icons{
+  text-align: center;
+  margin-left: 0px;
+}
+
+.logo-icon nav {
+  display: block;
+  color: #FFFFFF;
+  padding: 20px 20px;
+  border-radius: 10px;
+  background-color: #0F1724;
+  transition: 3s ease;
+
+}
+
+.logo-icon nav:hover{
+  background: #0C3090;
+}
+
+.logo-icons img{
+  margin-bottom: 30px;
+  color: #B8BABE;
+}
+
+.logo-icon1 img{
+  margin-top: 30px;
+  margin-bottom: 35px;
+  color: #B8BABE;
+}
+
+.logo-icons p{
+  margin-right: 7px;
+  font-size: 15px;
+  color: #B8BABE;
+}
+
+
+.entrystwo{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.textstwo{
+  text-decoration: none;
+}
+
+.entrysthere{
+  margin-left: 2%;
+  margin-right: 12%;
+}
+
+.textsthere{
+  text-decoration: none;
+}
+
+.textsthere h1{
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 49px;
+  color: #FFFFFF;
+}
+
+
+.entrythere-img img{
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.entrythere p{
+  color: #666;
+}
+
+.logo-iconend{
+  background-color: #0A121F;
+}
+
+.logo-iconsend{
+  margin-top: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 50px;
+}
+
+.logo-iconend nav {
+  display: block;
+  color: #FFFFFF;
+  padding: 20px 20px;
+
+}
+
+.logo-iconsend p{
+  margin-right: 7px;
+  font-size: 14px;
+  color: #B8BABE;
+}
+
+.logo-iconsend h1{
+  margin-right: 7px;
+  font-size: 14px;
+  color: white;
+}
+
+@media screen and (min-width:1024px) {
+  .form-popup{
+    width: 90%;
+  }
+
+  .from-box .from-details{
+    display: none;
+  }
+
+  .from-box .from-content{
+    padding: 30px 20px;
+  }
+
+  .entry{
+    display: flex;
+    margin-left: 10%;
+    margin-top: 10%;
+  }
+
+  .videoo video{
+    max-width: 90%;
+  }
+
+  .videoo .close{
+    bottom: 70%;
+    left: 80%;
+  }
+
+  section{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+  }
+
+  .entrys div {
+    display: block;
+    width: 100%;
+  }
+
+  .entrys div img{
+    margin: 45px;
+  } 
+  
+  .company-logo div {
+    display: block;
+  }
+
+  .company-logo div img{
+    margin: 45px;
+    width: 10%;
+    margin-top: 100px;
+  } 
+
+  .entrystwo div {
+    display: block;
+    width: 100%;
+  }
+
+  .entrystwo div img{
+    margin: 45px;
+  } 
+
+  
+  .logo-icon {
+    display: inline-flex;
+    text-align: center;
+    width: 100%;
+  }
+
+  .logo-icon nav {
+    margin:10px;
+  }
+
+  .logo-icon h5 {
+    font-size: 20px;
+  }
+
+  .logo-icon p {
+    font-size: 10px;
+  }
+
+  .entrythere{
+    display: flex;
+    margin-left: 10%;
+    margin-top: 5%;
+  }
+
+  .entrysthere div {
+    display: block;
+    width: 100%;
+  }
+
+  .entrysthere div img{
+    margin: 45px;
+  }
+
+  .logo-iconend {
+    display: flex;
+    width: 100%;
+  }
+
+  .logo-iconend nav {
+    margin:10px;
+  }
+  
+  .logo-icon5end img {
+    margin-right:10px;
+    margin-top: 20px;
+  }
+  .logo-icon1end h2 {
+    font-size: 16px;
+    color: #3A68B8;
+  }
+}
+
+@media screen and (min-width:481px) and (max-width:1023px){
+  .from-box .from-details{
+    display: none;
+  }
+
+  .information .fa-bars{
+    margin-right: 5%;
+    display: flexbox;
+    left: auto;
+    color: white;
+    cursor: pointer;
+    font-size: 100%;
+  }
+
+  .information :is(.fa-xmark , .about .fa-bars){
+    display: block;
+  }
+
+  .information{
+    padding: 10px;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+
+  .information .logo img{
+    font-size: 100%;
+    display: flex;
+  }
+  
+  .information .about{
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding-top: 50px;
+    text-align: center;
+    background: #08101E;
+    transition: 1s ease;
+  }
+
+  .information .about.show-menu{
+    left: 0;
+  }
+
+  .information .about a{
+    color: white;
+    display: inline-flex;
+    margin: 20px 0;
+    font-size: 1.2rem;
+  }
+
+  .information .login{
+    font-size: 100%;
+    padding: 7px 10px;
+  }
+
+  .entrys{
+    margin-top: 100px;
+    margin-right: 100px;
+    margin-left: 100px;
+    display: flex;
+  }
+  .entrys div {
+    display: block;
+    width: 100%;
+  }
+  .entry h6{
+    font-size: 20px;
+  }
+
+  .entry h1{
+    font-size: 30px;
+  }
+
+  .entry h5{
+    font-size: 8px;
+  }
+
+  .entry .getstarted{
+    font-size: 12px;
+  }
+  .entry .watchvideo{
+    font-size: 12px;
+  }
+
+  .entrys div img{
+    margin: 45px;
+  }
+  .videoo video{
+    max-width: 90%;
+  } 
+
+  .videoo .close{
+    bottom: 80%;
+    left: 78%;
+    max-width: 20px;
+  }
+
+  .company-logo{
+    margin-right: 150px;
+    margin-left: 150px;
+  }
+  .company-logo div img{
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 100px;
+    width: 150px;
+  }
+
+
+  .entrystwo{
+    margin-right: 100px;
+    margin-left: 100px;
+    display: flex;
+
+  }
+
+  .entrystwo div {
+    display: block;
+    width: 100%;
+  }
+
+  .entrystwo div img{
+    width: 280px;
+    margin-top: 150px;
+  } 
+
+  .entrytwo h1{
+    font-size: 25px;
+  }
+
+  .entrytwo h5{
+    font-size: 10px;
+  }
+
+  .logo-icon nav {
+    margin-top:10px;
+  }
+
+  .entrysthere{
+    margin-top: 100px;
+    margin-right: 100px;
+    margin-left: 100px;
+    display: flex;
+  }
+  .entrysthere div {
+    display: block;
+    width: 100%;
+  }
+
+  .entrythere h1{
+    font-size: 22px;
+  }
+
+  .entrythere p{
+    font-size: 10px;
+  }
+
+  .entrysthere div img{
+    margin: 45px;
+  } 
+}
+
+
+@media screen and (min-width:320px) and (max-width:480px){
+  .from-box .from-details{
+    display: none;
+  }
+
+  .information .fa-bars{
+    margin-right: 5%;
+    display: flexbox;
+    left: auto;
+    color: white;
+    cursor: pointer;
+    font-size: 100%;
+  }
+
+  .information :is(.fa-xmark , .about .fa-bars){
+    display: block;
+  }
+
+  .information{
+    padding: 10px;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+
+  .information .logo img{
+    font-size: 100%;
+    display: flex;
+  }
+
+  .information .logo h2{
+    font-size: 100%;
+  }
+
+  .information .about{
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding-top: 50px;
+    text-align: center;
+    background: #08101E;
+    transition: 1s ease;
+  }
+
+  .information .about.show-menu{
+    left: 0;
+  }
+
+  .information .about a{
+    color: white;
+    display: inline-flex;
+    margin: 20px 0;
+    font-size: 1.2rem;
+  }
+
+  .information .login{
+    font-size: 100%;
+    padding: 7px 10px;
+  }
+
+  .entrys{
+    margin-top: 100px;
+  }
+
+  .entrys .texts h1{
+    font-size: 30px;
+  }
+  .entrys .texts h5{
+    font-size: 10px;
+  }
+  .entrys img{
+    margin-top: 50px;
+  }
+  .entry .getstarted{
+    font-size: 12px;
+  }
+  .entry .watchvideo{
+    font-size: 12px;
+  }
+
+  .videoo video{
+    max-width: 90%;
+}
+
+  .videoo.entervideo{
+    left: 10%;
+
+  }
+
+  .videoo .close{
+    bottom: 72%;
+    left: 88%;
+    max-width: 15px;
+  }
+
+  .company-logo div{
+    margin-bottom: 100px;
+
+  }
+  .company-logo div img{
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 100px;
+    width: 150px;
+  }
+
+  .entrytwo-img img{
+    width: 100%;
+  }
+  .textstwo h1{
+    margin-top: 50px;
+    font-size: 22px;
+  }
+  .textstwo h5{
+    font-size: 10px;
+  }
+
+  .logo-icon nav {
+    margin:10px;
+  }
+
+  .entrythere-img img{
+    width: 100%;
+  }
+  .textsthere h1{
+    margin-top: 100px;
+    font-size: 22px;
+  }
+  .textsthere p{
+    font-size: 10px;
+  }
+}
+
+
+
