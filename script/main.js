@@ -6,6 +6,9 @@ const showVideoo = document.querySelector(".watchvideo");
 const formPopun = document.querySelector(".form-popup");
 const hidePopupBtn = document.querySelector(".form-popup .fa-xmark");
 const loginSignupLink = document.querySelectorAll(".from-box .bottom-link a");
+var copy = document.querySelector(".company_img").cloneNode(true);
+    document.querySelector(".company-logo").appendChild(copy);
+
 
 menuBtn.addEventListener("click", () => {
     informationsizess.classList.toggle("show-menu");
