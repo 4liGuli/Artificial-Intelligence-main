@@ -446,7 +446,9 @@ from button:hover{
   white-space: nowrap;
   position: relative;
   overflow: hidden;
+  display: flex;
 }
+
 .company-logo:before, .company-logo:after {
   position: absolute;
   top: 0;
@@ -634,6 +636,9 @@ from button:hover{
 }
 
 @media (min-width:1024px) {
+  .information .fa-bars{
+    display: none;  
+  }
   .form-popup{
     width: 90%;
   }
@@ -685,7 +690,6 @@ from button:hover{
     margin: 45px;
   } 
 
-  
   .logo-icon {
     display: inline-flex;
     text-align: center;
@@ -701,7 +705,7 @@ from button:hover{
   }
 
   .logo-icons p {
-    font-size: 10px;
+    font-size: 15px;
   }
 
   .entrythere{
@@ -995,6 +999,7 @@ from button:hover{
   
 
   .entrytwo-img img{
+    margin-top: 50px;
     width: 100%;
   }
   .textstwo h1{
