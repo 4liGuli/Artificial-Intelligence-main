@@ -548,10 +548,10 @@ from button:hover{
 }
 
 
-.swiper-slide div:hover{
+/* .swiper-slide div:hover{
 background-color: #0C3090;
 transition: 3s ease;
-}
+} */
 .swiper-slide img {
 margin-bottom: 10px;
 }
@@ -633,7 +633,7 @@ color: #B8BABE;
 }
 
 .logo-iconend nav {
-  display: block;
+  display: inline-block;
   color: #FFFFFF;
   padding: 20px 20px;
 
@@ -891,6 +891,9 @@ color: #B8BABE;
   .entrysthere div img{
     margin: 45px;
   } 
+  .logo-iconend nav{
+    margin-right: 50px;
+  }
 }
 
 
@@ -1017,6 +1020,9 @@ color: #B8BABE;
   .textsthere p{
     margin-left: 22px;
     font-size: 10px;
+  }
+  .company-logo:before, .company-logo:after {
+    width: 100px;
   }
 }
 
