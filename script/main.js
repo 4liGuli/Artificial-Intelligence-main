@@ -59,12 +59,12 @@ src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
         slidesPerView: 2.5,
         spaceBetween: 40,
       },
-      920: {
+      1024: {
         slidesPerView: 3,
         spaceBetween: 50,
       },
-      1024: {
-        slidesPerView: 3.5,
+      1280: {
+        slidesPerView: 4,
         spaceBetween: 50,
       },
     },

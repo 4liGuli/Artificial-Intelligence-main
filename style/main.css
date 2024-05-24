@@ -81,13 +81,12 @@ header{
 
 .information .logo h2{
   font-size: 22.55px;
-  font-weight: 600;
   color: #3A68B8;
   
 }
 
 .information .about{
-  width: 55%;
+  width: 50%;
   display: flex;
   list-style: none;
   gap: 40px;
@@ -101,19 +100,20 @@ header{
   position: absolute;
   right: 20px;
   top: 20px;
-  font-size: 1.5rem;
+  font-size: 25px;
 
 }
 
 .information .about a{
   text-decoration: none;
   font-size: 16px;
-  font-weight: 400;
   color: #FFFFFF;
+  transition: 1s ease;
 }
 
 .information .about a:hover{
   color: #3A68B8;
+  transition: 1s ease;
 }
 
 .information .signin-btn{
@@ -135,8 +135,6 @@ header{
 
 .blur-bg-overlay{
   position: fixed;
-  top: 0%;
-  left: 0%;
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -360,7 +358,7 @@ from button:hover{
 .entry .getstarted{
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-style: normal;
+
   text-decoration: none;
   border: none;
   outline: none;
@@ -393,7 +391,7 @@ from button:hover{
 }
 
 .entry .watchvideo img{
-  margin: 1px;  
+  margin: 0px;  
 }
 
 .entry .watchvideo:hover{
@@ -419,7 +417,7 @@ from button:hover{
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
-  transition: transform 1s ease, opacity 3s;
+  transition: opacity 3s;
 }
 .videoo video{
   position: relative;
@@ -456,7 +454,7 @@ from button:hover{
   width: 250px;
   height: 100%;
   content: "";
-  z-index: 2;
+  z-index: 1;
 }
 
 .company-logo:before{
@@ -550,16 +548,21 @@ from button:hover{
 
 /* .swiper-slide div:hover{
 background-color: #0C3090;
-transition: 3s ease;
+  padding: 0;
+  box-sizing: border-box;t
+
+ransition: 3s ease;
 } */
+
+
 .swiper-slide img {
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .logo-img {
-display: flex;
-justify-content: center;
-padding-top: 20px;
+  display: flex;
+    justify-content: center;
+  padding-top: 20px;
 }
 
 .logo-img1 {
@@ -571,16 +574,16 @@ padding-top: 20px;
   }
 
 .swiper-slide h5 {
-display: block;
-text-align: center;
-font-size: 20px;
+  display: block;
+  text-align: center;
+  font-size: 20px;
 }
 
 .swiper-slide p{
-display: block;
-text-align: center;
-font-size: 15px;
-color: #B8BABE;
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  color: #B8BABE;
 }
 
 .entrystwo{
@@ -622,34 +625,73 @@ color: #B8BABE;
 }
 
 .logo-iconend{
-  background-color: #0A121F;
+  background-color: #0A111F;
+  margin-top: 30px;
 }
-
 .logo-iconsend{
+  max-width: 1280px;
+  margin: auto;
   margin-top: 50px;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 50px;
 }
 
-.logo-iconend nav {
-  display: inline-block;
+.logo-iconend-row{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.logo-icon1end ul{
+
+  list-style: none;
+  padding: 0;
+}
+
+.logo-icon1end{
+  margin-bottom: 40px;
+  padding: 0 35px;
+}
+
+.logo-icon1end h2{
+  font-size: 18px;
+  color: #3A68B8;
+  text-transform: capitalize;
+  margin-bottom: 1px;
+  font-weight: 500;
+  position: relative;
+}
+
+.logo-icon1end h5{
+  font-size: 18px;
   color: #FFFFFF;
-  padding: 20px 20px;
-
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
 }
 
-.logo-iconsend p{
-  margin-right: 7px;
+.logo-icon1end ul li a{
   font-size: 14px;
-  color: #B8BABE;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 450;
+  color: #bbbbbb;
+  margin-bottom: 20px;
+  display: block;
+  transition: all 0.3s ease;
 }
 
-.logo-iconsend h1{
-  margin-right: 7px;
-  font-size: 14px;
+.logo-icon1end ul li a:hover{
+  color: #FFFFFF;
+  padding-left: 8px;
+}
+
+.logo-icon11end ul nav li a{
+  font-weight: 450;
   color: white;
+  margin-bottom: 15px;
 }
+
+
 
 @media (min-width:1024px) {
   .information .fa-bars{
@@ -723,25 +765,10 @@ color: #B8BABE;
   .entrysthere h1{
     font-size: 40px;
   }
-
-  .logo-iconend {
-    display: flex;
-    width: 100%;
-  }
-
-  .logo-iconend nav {
-    margin:10px;
-  }
-  
-  .logo-icon5end img {
-    margin-right:10px;
-    margin-top: 20px;
-  }
-  .logo-icon1end h2 {
-    font-size: 16px;
-    color: #3A68B8;
-  }
 }
+
+
+
 
 @media (min-width:768px) and (max-width:1023px){
   .from-box .from-details{
@@ -891,10 +918,8 @@ color: #B8BABE;
   .entrysthere div img{
     margin: 45px;
   } 
-  .logo-iconend nav{
-    margin-right: 50px;
-  }
 }
+
 
 
 @media (min-width:320px) and (max-width:480px){
@@ -922,12 +947,13 @@ color: #B8BABE;
   }
 
   .information .logo img{
-    font-size: 100%;
-    display: flex;
+    width: 30px;
+
   }
 
   .information .logo h2{
-    font-size: 100%;
+    font-size: 15px;
+    margin-top: 8px;
   }
 
   .information .about{
@@ -957,6 +983,10 @@ color: #B8BABE;
   .information .login{
     font-size: 100%;
     padding: 7px 10px;
+  }
+  .information .signin-btn {
+    font-size: 12px;
+    padding: 5px 10px;
   }
 
   .entrys{
@@ -1025,6 +1055,7 @@ color: #B8BABE;
     width: 100px;
   }
 }
+
 
 
 @media(min-width:375px) and (max-width:576px) {
